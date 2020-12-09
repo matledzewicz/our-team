@@ -2,6 +2,8 @@ import { TestBed } from '@angular/core/testing';
 import { HttpTestingController, HttpClientTestingModule } from '@angular/common/http/testing';
 import { noop } from 'rxjs';
 import { PageContentService } from './page-content.service';
+import { PageElement } from './models';
+import { Response } from '../response';
 
 describe('PageContentService', () => {
   let sut: PageContentService;
@@ -32,18 +34,18 @@ describe('PageContentService', () => {
       const req = httpMock.expectOne('task/index.json');
       expect(req.request.method).toBe('GET');
 
-      req.flush({}); // FIXME: Use real model here
+      req.flush({ data: [] });
     });
 
     it('should return correct response', (done: DoneFn) => {
-      sut.getContent().subscribe((response: any) => { // FIXME: Add type
-        expect(response).toEqual({});
+      sut.getContent().subscribe((response: Response<PageElement[]>) => {
+        expect(response).toEqual({ data: [] });
         done();
       });
 
       const req = httpMock.expectOne('task/index.json');
 
-      req.flush({}); // FIXME: Use real model here
+      req.flush({ data: [] });
     });
 
     it('should also works like a callback', () => {
@@ -54,7 +56,7 @@ describe('PageContentService', () => {
       const req = httpMock.expectOne('task/index.json');
       expect(req.request.method).toBe('GET');
 
-      req.flush({}); // FIXME: Use real model here
+      req.flush({ data: [] });
     });
   });
 });

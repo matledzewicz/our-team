@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { PageContentService } from './api/page-content';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +6,4 @@ import { PageContentService } from './api/page-content';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'our-team';
-
-  constructor(private pageContentService: PageContentService) {
-    this.pageContentService.getContent().subscribe((a) => console.log(a));
-  }
 }
