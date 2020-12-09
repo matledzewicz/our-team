@@ -1,6 +1,9 @@
 <div class="member-card p-3">
   <div class="member-card-image">
-    <img [srcset]="calculateSrcSet()">
+    <img 
+      [srcset]="calculateSrcSet()"
+      sizes="(max-width: 400px) 200px, (max-width: 600px) 400px, (max-width: 1200px) 200px, (max-width: 3240px) 400px, (max-width: 5940px) 1080px, 1920px"
+    >
   </div>
   <div class="member-card-block pl-4 pt-4">
     <p class="member-card-title">{{ card.block.title }}</p>
