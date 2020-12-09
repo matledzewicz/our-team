@@ -1,0 +1,18 @@
+@import '~src/themes/colors';
+
+@mixin our-team-theme() {
+  body {
+    background-color: $light-grey;
+  }
+  .our-team-app {
+    
+
+    h1 {
+      color: $primary;
+    }
+
+    a {
+      color: $primary;
+    }
+  }
+}
