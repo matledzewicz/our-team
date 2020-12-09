@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { PageElement } from 'src/app/api/page-content';
+import { PageElement } from 'src/app/infrastructure/page-content';
 
 @Component({
   selector: 'app-page-content',

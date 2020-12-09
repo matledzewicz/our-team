@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MemberCard } from 'src/app/api/page-content';
 import { calculateSrcSet } from './member-card-image.helper';
+import { MemberCard } from 'src/app/infrastructure/page-content';
 
 @Component({
   selector: 'app-member-card',

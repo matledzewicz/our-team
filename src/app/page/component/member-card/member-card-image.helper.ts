@@ -1,4 +1,4 @@
-import { ImageUrls } from 'src/app/api/page-content';
+import { ImageUrls } from 'src/app/infrastructure/page-content';
 import { keys, sortBy, parseInt, reverse, get, property } from 'lodash-es';
 
 interface WidthValue {

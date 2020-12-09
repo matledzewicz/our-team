@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { PageContentResolver } from './page-content.resolver';
-import { PageContentService, PageElement } from 'src/app/api/page-content';
+import { PageContentService, PageElement } from 'src/app/infrastructure/page-content';
 import { of, throwError } from 'rxjs';
 import { Router } from '@angular/router';
 

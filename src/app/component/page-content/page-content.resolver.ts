@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Resolve, Router } from '@angular/router';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-import { PageElement, PageContentService } from 'src/app/api/page-content';
-import { ApiResponse } from 'src/app/api/api-response';
+import { PageElement, PageContentService } from 'src/app/infrastructure/page-content';
+import { ApiResponse } from 'src/app/infrastructure/api-response';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Injectable({
