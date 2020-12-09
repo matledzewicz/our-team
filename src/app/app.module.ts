@@ -5,12 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ApiModule } from './api/api.module';
 import { PageModule } from './page/page.module';
-import { PageContainerComponent } from './component/page-container/page-container.component';
+import { PageContentComponent } from './component/page-content/page-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageContainerComponent
+    PageContentComponent
   ],
   imports: [
     BrowserModule,

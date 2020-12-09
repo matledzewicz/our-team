@@ -7,7 +7,7 @@ import { PageElement, PageContentService } from 'src/app/api/page-content';
 @Injectable({
   providedIn: 'root'
 })
-export class PageContainerResolver implements Resolve<PageElement[]> {
+export class PageContentResolver implements Resolve<PageElement[]> {
   constructor(private pageContentService: PageContentService) {
   }
   resolve(): Observable<PageElement[]> {

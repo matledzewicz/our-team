@@ -1,11 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PageContainerResolver } from './page-container.resolver';
+import { PageContentResolver } from './page-content.resolver';
 import { PageContentService, PageElement } from 'src/app/api/page-content';
 import { of } from 'rxjs';
 
-describe('PageContainerResolver', () => {
-  let resolver: PageContainerResolver;
+describe('PageContentResolver', () => {
+  let resolver: PageContentResolver;
   let pageContentService: jasmine.SpyObj<PageContentService>;
 
   beforeEach(() => {
@@ -17,7 +17,7 @@ describe('PageContainerResolver', () => {
         { provide: PageContentService, useValue: pageContentService },
       ]
     });
-    resolver = TestBed.inject(PageContainerResolver);
+    resolver = TestBed.inject(PageContentResolver);
   });
 
   it('should be created', () => {

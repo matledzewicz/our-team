@@ -5,11 +5,11 @@ import { Observable } from 'rxjs';
 import { PageElement } from 'src/app/api/page-content';
 
 @Component({
-  selector: 'app-page-container',
-  templateUrl: './page-container.component.html',
-  styleUrls: ['./page-container.component.scss']
+  selector: 'app-page-content',
+  templateUrl: './page-content.component.html',
+  styleUrls: ['./page-content.component.scss']
 })
-export class PageContainerComponent implements OnInit {
+export class PageContentComponent implements OnInit {
   elements$: Observable<PageElement[]>;
 
   constructor(private route: ActivatedRoute) { }

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageContainerComponent } from './component/page-container/page-container.component';
-import { PageContainerResolver } from './component/page-container/page-container.resolver';
+import { PageContentComponent } from './component/page-content/page-content.component';
+import { PageContentResolver } from './component/page-content/page-content.resolver';
 
 const routes: Routes = [
   {
     path: '**',
-    component: PageContainerComponent,
-    resolve: { elements: PageContainerResolver },
+    component: PageContentComponent,
+    resolve: { elements: PageContentResolver },
   }
 ];
 
