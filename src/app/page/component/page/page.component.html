@@ -1,4 +1,11 @@
 <div class="page">
   <p class="page-title">{{ pageElement.attributes.title }}</p>
+  <div class="page-members">
+    <!-- TODO: Think about other solution -->
+    <app-member-card [card]="pageElement.attributes.memberCards.first"></app-member-card>
+    <app-member-card [card]="pageElement.attributes.memberCards.second"></app-member-card>
+    <app-member-card [card]="pageElement.attributes.memberCards.third"></app-member-card>
+
+  </div>
 </div>
 
