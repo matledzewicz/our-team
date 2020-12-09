@@ -1,0 +1,15 @@
+.member-card {
+  &-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  &-link {
+    font-size: 1.2rem;
+  }
+
+  &-text {
+    font-size: 1.2rem;
+  }
+}

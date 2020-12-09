@@ -1,11 +1,11 @@
-<div class="member-card">
+<div class="member-card mb-5">
   <div class="member-card-image">
     <img [srcset]="calculateSrcSet()" [sizes]="calculateSizes()">
   </div>
-  <div class="member-card-block">
-    <p>{{ card.block.title }}</p>
-    <p>{{ card.block.description }}</p>
-    <p>{{ card.block.link }}</p>
-    <p>{{ card.block.text }}</p>
+  <div class="member-card-block pl-4 pt-4">
+    <p class="member-card-title">{{ card.block.title }}</p>
+    <p class="mb-4 member-card-description">{{ card.block.description }}</p>
+    <a class="member-card-link" href="mailto: {{ card.block.link }}">{{ card.block.link }} </a>
+    <p class="member-card-text">{{ card.block.text }}</p>
   </div>
 </div>
