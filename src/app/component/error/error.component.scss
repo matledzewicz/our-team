@@ -1,0 +1,12 @@
+@import '~src/themes/colors';
+
+.error {
+  height: 100vh;
+  width: 100vw;
+  background-color: $red;
+
+  &-description {
+    color: $black;
+    font-size: 2.5rem;
+  }
+}
