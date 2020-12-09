@@ -21,7 +21,7 @@ export class MemberCardComponent implements OnInit {
 
   calculateSizes(): string {
     // TODO: Calculate it base on MemberCard imageUrl property
-    return '(max-width: 700px) 400px, (max-width: 1250px) 200px, (max-width: 3300px) 400px, 1080px';
+    return '(max-width: 450px) 200px, (max-width: 700px) 400px, (max-width: 1400px) 200px, (max-width: 3300px) 400px, 1080px';
   }
 
 }
