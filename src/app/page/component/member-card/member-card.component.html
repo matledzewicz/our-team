@@ -1,6 +1,6 @@
 <div class="member-card">
   <div class="member-card-image">
-    <img [src]="card.imageUrl.w200">
+    <img [srcset]="calculateSrcSet()" [sizes]="calculateSizes()">
   </div>
   <div class="member-card-block">
     <p>{{ card.block.title }}</p>
