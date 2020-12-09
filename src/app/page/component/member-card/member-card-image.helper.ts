@@ -13,6 +13,6 @@ export function calculateSrcSet(imageUrls: ImageUrls): string {
     }));
 
   return reverse(sortBy(widthValuCollection, property('width')))
-    .map((o: any) => `${o.value} ${o.width}w`)
+    .map((o: WidthValue) => `${o.value} ${o.width}w`)
     .join(', ');
 }
