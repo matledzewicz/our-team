@@ -18,9 +18,4 @@ export class MemberCardComponent implements OnInit {
   calculateSrcSet(): string {
     return calculateSrcSet(this.card.imageUrl);
   }
-
-  calculateSizes(): string {
-    // TODO: Modify it to something more clean
-    return '(max-width: 450px) 200px, (max-width: 700px) 400px, (max-width: 1400px) 200px, (max-width: 3300px) 400px, 1080px';
-  }
 }
