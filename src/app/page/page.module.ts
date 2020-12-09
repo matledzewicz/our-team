@@ -13,6 +13,7 @@ import { MemberCardComponent } from './component/member-card/member-card.compone
   ],
   exports: [
     PageComponent,
+    MemberCardComponent,
   ]
 })
 export class PageModule { }

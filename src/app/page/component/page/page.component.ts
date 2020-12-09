@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { PageElement } from 'src/app/api/page-content';
 
 @Component({
   selector: 'app-page',
@@ -7,5 +6,5 @@ import { PageElement } from 'src/app/api/page-content';
   styleUrls: ['./page.component.scss']
 })
 export class PageComponent {
-  @Input() pageElement: PageElement;
+  @Input() title: string;
 }

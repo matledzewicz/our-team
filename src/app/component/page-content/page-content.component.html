@@ -1,1 +1,8 @@
-<app-page *ngFor="let element of elements$ | async" [pageElement]="element"></app-page>
+<app-page *ngFor="let element of elements$ | async" [title]="element.attributes.title">
+  <!-- TODO: Think about other solution -->
+  <!-- I don't like idea to hardode first, second and third -->
+  <!-- However, I don't want to assume more without knowing API better -->
+  <app-member-card [card]="element.attributes.memberCards.first"></app-member-card>
+  <app-member-card [card]="element.attributes.memberCards.second"></app-member-card>
+  <app-member-card [card]="element.attributes.memberCards.third"></app-member-card>
+</app-page>
