@@ -12,6 +12,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class PageContentResolver implements Resolve<PageElement[]> {
   constructor(private pageContentService: PageContentService, private router: Router) {
   }
+
   resolve(): Observable<PageElement[]> {
     return this.pageContentService.getContent().pipe(
       map((response: ApiResponse<PageElement[]>) => response.data),

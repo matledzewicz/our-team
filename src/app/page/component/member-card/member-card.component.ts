@@ -7,13 +7,8 @@ import { MemberCard } from 'src/app/infrastructure/page-content';
   templateUrl: './member-card.component.html',
   styleUrls: ['./member-card.component.scss']
 })
-export class MemberCardComponent implements OnInit {
+export class MemberCardComponent {
   @Input() card: MemberCard;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   calculateSrcSet(): string {
     return calculateSrcSet(this.card.imageUrl);

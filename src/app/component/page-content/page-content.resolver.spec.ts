@@ -49,7 +49,7 @@ describe('PageContentResolver', () => {
     pageContentService.getContent.and.returnValue(throwError(new Error('foo')));
 
     resolver.resolve().subscribe(
-      () => done.fail('should be error'),
+      () => done.fail('should be an error'),
       () => {
         expect(router.navigate).toHaveBeenCalledWith(['/error']);
         done();
