@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { Resolve, Router } from '@angular/router';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-import { PageElement, PageContentService } from 'src/app/api/page-content';
-import { ApiResponse } from 'src/app/api/api-response';
+import { PageElement, PageContentService, PageContentResponse } from 'src/app/infrastructure/page-content';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Injectable({
@@ -12,9 +11,10 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class PageContentResolver implements Resolve<PageElement[]> {
   constructor(private pageContentService: PageContentService, private router: Router) {
   }
+
   resolve(): Observable<PageElement[]> {
     return this.pageContentService.getContent().pipe(
-      map((response: ApiResponse<PageElement[]>) => response.data),
+      map((response: PageContentResponse) => response.data),
       catchError((error: HttpErrorResponse) => {
         this.router.navigate(['/error']);
 

@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpTestingController, HttpClientTestingModule } from '@angular/common/http/testing';
 import { noop } from 'rxjs';
-import { PageContentService } from './page-content.service';
+import { PageContentService, PageContentResponse } from './page-content.service';
 import { PageElement } from './models';
 import { ApiResponse } from '../api-response';
 
@@ -38,7 +38,7 @@ describe('PageContentService', () => {
     });
 
     it('should return correct response', (done: DoneFn) => {
-      sut.getContent().subscribe((response: ApiResponse<PageElement[]>) => {
+      sut.getContent().subscribe((response: PageContentResponse) => {
         expect(response).toEqual({ data: [] });
         done();
       });

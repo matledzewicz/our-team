@@ -4,11 +4,13 @@ import { Observable } from 'rxjs';
 import { PageElement } from './models';
 import { ApiResponse } from '../api-response';
 
+export type PageContentResponse = ApiResponse<PageElement[]>;
+
 @Injectable()
 export class PageContentService {
   constructor(private http: HttpClient) { }
 
-  public getContent = (): Observable<ApiResponse<PageElement[]>> => {
-    return this.http.get<ApiResponse<PageElement[]>>('task/index.json');
+  public getContent = (): Observable<PageContentResponse> => {
+    return this.http.get<PageContentResponse>('task/index.json');
   }
 }

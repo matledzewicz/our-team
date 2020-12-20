@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PageComponent } from './component/page/page.component';
 import { MemberCardComponent } from './component/member-card/member-card.component';
+import { PageSectionComponent } from './component/page/page-section.component';
 
 @NgModule({
   declarations: [
-    PageComponent,
+    PageSectionComponent,
     MemberCardComponent,
   ],
   imports: [
     CommonModule,
   ],
   exports: [
-    PageComponent,
+    PageSectionComponent,
+    MemberCardComponent,
   ]
 })
 export class PageModule { }

@@ -1,4 +1,4 @@
-import { ImageUrls } from 'src/app/api/page-content';
+import { ImageUrls } from 'src/app/infrastructure/page-content';
 import { keys, sortBy, parseInt, reverse, get, property } from 'lodash-es';
 
 interface WidthValue {
@@ -13,6 +13,6 @@ export function calculateSrcSet(imageUrls: ImageUrls): string {
     }));
 
   return reverse(sortBy(widthValuCollection, property('width')))
-    .map((o: any) => `${o.value} ${o.width}w`)
+    .map((o: WidthValue) => `${o.value} ${o.width}w`)
     .join(', ');
 }

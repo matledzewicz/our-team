@@ -1,4 +1,4 @@
-import { ImageUrls } from 'src/app/api/page-content';
+import { ImageUrls } from 'src/app/infrastructure/page-content';
 import { calculateSrcSet } from './member-card-image.helper';
 
 describe('MemberCardImageHelper', () => {
